@@ -1,1 +1,23 @@
 @import "tailwindcss";
+
+@font-face {
+    font-family: Josefin Sans;
+    src: url("../src/assets/fonts/JosefinSans-Bold.ttf")
+
+}
+
+@font-face {
+    font-family: Spectral;
+    src: url("../src/assets/fonts/Spectral-Regular.ttf")
+
+}
+
+@theme {
+
+    --font-title: "Josefin Sans", "sans-serif";
+    --font-text: "Spectral", "serif";
+
+    --color-primary: #d63b41;
+    --color-secondary: #a6a6a6;
+    --color-background: #1c1a1a;
+}
