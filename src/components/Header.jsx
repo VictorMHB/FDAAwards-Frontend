@@ -7,33 +7,35 @@ export default function Header() {
 
     return(
         <>
-        <header className="sticky top-0 left-0 w-full z-50 backdrop-blur-md border-b border-white/10 flex justify-between items-center text-background py-4 px-8 md:px-32 bg-primary/20">
-        <a href="#" className="flex items-center gap-3">
-          <div className="w-8 h-8 bg-background rounded-sm flex items-center justify-center">
-            <div className="w-6 h-6 bg-primary rounded-sm"></div>
-          </div>
-          <h1 className="text-2xl text-white font-title hover:text-white/80 transition-all">FDA AWARDS</h1>
+        <header className="fixed top-0 left-0 w-full z-50 bg-background/80 backdrop-blur-lg border-b-4 border-background/30 flex justify-between items-center text-background py-6 px-8 md:px-20">
+        <a href="#" className="flex flex-col items-start group">
+          <h1 className="text-3xl lg:text-4xl font-title font-bold tracking-widest text-primary group-hover:text-primary transition-colors duration-300">
+            FDA <span className="text-white group-hover:text-primary transition-colors duration-300">AWARDS</span>
+          </h1>
+          <span className="mt-1 h-[3px] w-0 bg-primary transition-all duration-400 group-hover:w-full"></span>
         </a>
 
         <button className="xl:hidden text-white text-3xl focus:outline-none" onClick={toggleMenu}>
             {menuOpen ? <FiX /> : <FiMenu />}
         </button>
 
-        <ul className="hidden xl:flex items-center gap-8 font-title text-lg">
-            {["Home", "Votação", "Informações", "Sobre"].map((item) => (
-                <li key={item} className="relative p-3 cursor-pointer group text-white hover:text-white/80 transition-all">{item}
-                    <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full"></span>
-                </li>
+        <nav className="hidden xl:flex items-center gap-8 font-title">
+            {["HOME", "VOTAÇÃO", "INFORMAÇÕES", "SOBRE"].map((item) => (
+                <a key={item} href="#" className="relative text-white hover:text-primary transition-all uppercase tracking-wide text-sm font-semibold group">
+                    {item}
+                    <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-primary transition-all duration-400 group-hover:w-full"></span>
+                </a>
             ))}
-        </ul>
+        </nav>
       </header>
 
-      <div className={`xl:hidden fixed top-0 right-0 h-full w-2/3 bg-primary/95 backdrop-blur-lg shadow-lg transform transition-transform duration-300 ${
+      {/*Menu Mobile*/}      
+      <div className={`xl:hidden fixed top-0 right-0 h-full w-2/3 bg-background/80 backdrop-blur-lg shadow-lg transform transition-transform duration-300 ${
             menuOpen ? "translate-x-0" : "translate-x-full"
         } z-40`}>
             <ul className="flex flex-col items-center justify-center h-full gap-8 font-title text-lg">
                 {["Home", "Votação", "Informações", "Sobre"].map((item) => (
-                    <li key={item} className="relative p-3 cursor-pointer text-white hover:text-white transition-all" onClick={() => setMenuOpen(false)}>
+                    <li key={item} className="relative p-3 cursor-pointer text-white hover:text-primary transition-all" onClick={() => setMenuOpen(false)}>
                         {item}
                         <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-whte transition-all duration-300 group-hover:w-full"></span>
                     </li>

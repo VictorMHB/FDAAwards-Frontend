@@ -8,16 +8,46 @@
 
 @font-face {
     font-family: Spectral;
-    src: url("../src/assets/fonts/Spectral-Regular.ttf")
+    src: url("../src/assets/fonts/Spectral-Regular.ttf");
+    font-weight: 400;
+    font-style: normal;
+}
 
+@font-face {
+    font-family: Spectral;
+    src: url("../src/assets/fonts/Spectral-Bold.ttf");
+    font-weight: 700;
+    font-style: normal;
 }
 
 @theme {
-
     --font-title: "Josefin Sans", "sans-serif";
     --font-text: "Spectral", "serif";
 
     --color-primary: #d63b41;
     --color-secondary: #a6a6a6;
-    --color-background: #1c1a1a;
+    --color-background: #1a1a1a;
+    --color-muted-background: #1b1111;
+    --color-foreground: #ffffff;
+    --color-muted-foreground: #a6a6a6;
+    --color-silver: #c0c0c0;
+    --color-dark-gray: #2a2a2a;
+}
+
+html, body, #root {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-background);
+    color: white;
+    font-family: var(--font-text);
+}
+
+/* Background para a página Home */
+.home-background {
+    background-image: url('../assets/images/trofeuVermelho.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
