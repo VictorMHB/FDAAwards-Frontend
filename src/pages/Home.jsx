@@ -128,8 +128,9 @@ export default function Home() {
                   <h3 className="text-xl font-title font-bold text-white uppercase tracking-wide">
                     EXIBIÇÃO EXCLUSIVA DE "SERVER O FILME"
                   </h3>
-                  <p className="text-sm text-secondary mt-2">
-                    Após anos de produção, Server o Filme terá sua primeira exibição no FDA AWARDS 2025.
+                  <p className="text-sm text-silver mt-2">
+                    Após anos de produção, Server o Filme terá sua primeira
+                    exibição no FDA AWARDS 2025.
                   </p>
                 </div>
               </div>
@@ -137,7 +138,8 @@ export default function Home() {
 
             {/* Card 2 - Recorde de Votantes */}
             <div className="group cursor-pointer">
-              <div className="
+              <div
+                className="
                 relative overflow-hidden rounded-lg 
                 bg-dark-gray
                 border border-silver/10
@@ -164,8 +166,9 @@ export default function Home() {
                   <h3 className="text-xl font-title font-bold text-white uppercase tracking-wide">
                     FDA AWARDS BATE RECORDES DE VOTOS
                   </h3>
-                  <p className="text-sm text-secondary mt-2">
-                    O maior número de votos da história do evento com 210 mil votantes.
+                  <p className="text-sm text-silver mt-2">
+                    O maior número de votos da história do evento com 210 mil
+                    votantes.
                   </p>
                 </div>
               </div>
@@ -173,7 +176,8 @@ export default function Home() {
 
             {/* Card 3 - Maior Vencedor */}
             <div className="group cursor-pointer">
-              <div className="
+              <div
+                className="
                 relative overflow-hidden rounded-lg 
                 bg-dark-gray
                 border border-silver/10
@@ -186,7 +190,7 @@ export default function Home() {
                 card-hover metallic-shine
               ">
                 <div className="aspect-video bg-gradient-to-br from-silver/10 via-dark-gray to-background flex items-center justify-center relative">
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10"></div>
                   <div className="text-center text-white">
                     <div className="w-20 h-20 bg-primary rounded-full flex items-center justify-center mx-auto mb-2">
                       <Award className="w-10 h-10 text-white" />
@@ -200,8 +204,9 @@ export default function Home() {
                   <h3 className="text-xl font-title font-bold text-white uppercase tracking-wide">
                     MAIOR VENCEDOR DO FDA AWARDS
                   </h3>
-                  <p className="text-sm text-secondary mt-2">
-                    Ganhador de 16 prêmios, Geovane do Carmo Elias dá entrevista inédita.
+                  <p className="text-sm text-silver mt-2">
+                    Ganhador de 16 prêmios, Geovane do Carmo Elias dá entrevista
+                    inédita.
                   </p>
                 </div>
               </div>
@@ -215,99 +220,214 @@ export default function Home() {
         <div className="max-w-7xl mx-auto">
           <div className="flex justify-between items-center mb-12">
             <h2 className="text-5xl font-title font-bold text-white uppercase tracking-wider">
-              EXPLORE
+              EXPLORAR
             </h2>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
             {/* Card Votação */}
             <div className="group cursor-pointer">
-              <div className="relative overflow-hidden rounded-lg bg-gradient-to-br from-primary/10 to-dark-gray border border-silver/20 p-8 h-64 flex flex-col justify-center card-hover metallic-shine silver-glow">
-                <div className="absolute top-4 right-4 w-16 h-16 bg-silver/10 rounded-full flex items-center justify-center">
-                  <Star className="w-8 h-8 text-silver" />
-                </div>
+              <div
+                className="
+                relative overflow-hidden rounded-lg 
+                bg-dark-gray
+                border border-silver/10 
+                
+                p-8 h-64 flex flex-col justify-center 
+                
+                group-hover:shadow-[0_0_0_3px_var(--color-silver)]
+                group-hover:border-transparent
+                group-hover:bg-dark-bg
+
+                transition-all duration-300 ease-in-out
+                card-hover metallic-shine
+              ">
+                <div className="absolute inset-0 bg-gradient-to-t from-dark-bg to-dark-gray transition-opacity duration-300 group-hover:opacity-0"></div>
+
                 <div className="relative z-10">
                   <h3 className="text-2xl font-title font-bold text-white uppercase tracking-wide mb-4">
                     VOTAÇÃO
                   </h3>
-                  <p className="text-secondary mb-6">
-                    Participe da votação e escolha seus favoritos em todas as
-                    categorias.
+                  <p className="text-silver mb-6">
+                    Participe da votação e escolha os vencedores de cada
+                    categoria.
                   </p>
-                  <button className="bg-primary hover:bg-primary/90 text-white px-6 py-3 rounded-lg font-title font-semibold uppercase tracking-wide transition-all duration-300 flex items-center gap-2 border border-silver/20">
-                    VOTAR AGORA
-                    <ArrowRight className="w-4 h-4" />
+
+                  <button
+                    className="
+                      relative uppercase
+                      overflow-hidden
+                      px-6 py-3
+                      font-title font-semibold tracking-wide 
+                      rounded-lg border-2 
+                      transition-all duration-300
+
+                      text-primary border-primary
+                      hover:text-white hover:border-silver
+
+                      bg-gradient-to-r from-primary to-primary bg-no-repeat 
+                      [background-size:0%_100%]
+                      hover:[background-size:100%_100%]
+                    ">
+                    <span className="relative flex items-center gap-2">
+                      VOTAR AGORA
+                      <ArrowRight className="w-5 h-5" />
+                    </span>
                   </button>
                 </div>
-                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
               </div>
             </div>
 
             {/* Card Patrocinadores */}
             <div className="group cursor-pointer">
-              <div className="relative overflow-hidden rounded-lg bg-gradient-to-br from-silver/10 to-dark-gray border border-silver/20 p-8 h-64 flex flex-col justify-center card-hover metallic-shine silver-glow">
-                <div className="absolute top-4 right-4 w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center">
-                  <Users className="w-8 h-8 text-primary" />
-                </div>
+              <div
+                className="
+                relative overflow-hidden rounded-lg 
+                bg-dark-gray
+                border border-silver/10 
+                
+                p-8 h-64 flex flex-col justify-center 
+                
+                group-hover:shadow-[0_0_0_3px_var(--color-silver)]
+                group-hover:border-transparent
+                group-hover:bg-dark-bg
+
+                transition-all duration-300 ease-in-out
+                card-hover metallic-shine
+              ">
+                <div className="absolute inset-0 bg-gradient-to-t from-dark-bg to-dark-gray transition-opacity duration-300 group-hover:opacity-0"></div>
+
                 <div className="relative z-10">
                   <h3 className="text-2xl font-title font-bold text-white uppercase tracking-wide mb-4">
                     PATROCINADORES
                   </h3>
-                  <p className="text-secondary mb-6">
-                    Conheça as empresas que tornam o FDA Awards possível todos
-                    os anos.
+                  <p className="text-silver mb-6">
+                    Conheça as empresas que tornam o FDA AWARDS possível todos os anos.
                   </p>
-                  <button className="bg-dark-gray hover:bg-dark-gray/80 text-white px-6 py-3 rounded-lg font-title font-semibold uppercase tracking-wide transition-all duration-300 flex items-center gap-2 border border-silver/20">
-                    CONHECER
-                    <ArrowRight className="w-4 h-4" />
+
+                  <button
+                    className="
+                      relative uppercase
+                      overflow-hidden
+                      px-6 py-3
+                      font-title font-semibold tracking-wide 
+                      rounded-lg border-2 
+                      transition-all duration-300
+
+                      text-white border-silver
+
+                      bg-gradient-to-r from-primary to-primary bg-no-repeat 
+                      [background-size:0%_100%]
+                      hover:[background-size:100%_100%]
+                    ">
+                    <span className="relative flex items-center gap-2">
+                      CONHECER
+                      <ArrowRight className="w-5 h-5" />
+                    </span>
                   </button>
                 </div>
-                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
               </div>
             </div>
 
             {/* Card Categorias */}
             <div className="group cursor-pointer">
-              <div className="relative overflow-hidden rounded-lg bg-gradient-to-br from-dark-gray to-background border border-silver/20 p-8 h-64 flex flex-col justify-center card-hover metallic-shine silver-glow">
-                <div className="absolute top-4 right-4 w-16 h-16 bg-silver/20 rounded-full flex items-center justify-center">
-                  <Award className="w-8 h-8 text-silver" />
-                </div>
+              <div
+                className="
+                relative overflow-hidden rounded-lg 
+                bg-dark-gray
+                border border-silver/10 
+                
+                p-8 h-64 flex flex-col justify-center 
+                
+                group-hover:shadow-[0_0_0_3px_var(--color-silver)]
+                group-hover:border-transparent
+                group-hover:bg-dark-bg
+
+                transition-all duration-300 ease-in-out
+                card-hover metallic-shine
+              ">
+                <div className="absolute inset-0 bg-gradient-to-t from-dark-bg to-dark-gray transition-opacity duration-300 group-hover:opacity-0"></div>
+
                 <div className="relative z-10">
                   <h3 className="text-2xl font-title font-bold text-white uppercase tracking-wide mb-4">
                     CATEGORIAS
                   </h3>
-                  <p className="text-secondary mb-6">
-                    Explore todas as categorias e veja os indicados de cada uma.
+                  <p className="text-silver mb-6">
+                    Explore todas as categorias e veja os indicados ao FDA AWARDS.
                   </p>
-                  <button className="bg-silver/20 hover:bg-silver/30 text-white px-6 py-3 rounded-lg font-title font-semibold uppercase tracking-wide transition-all duration-300 flex items-center gap-2 border border-silver/20">
-                    EXPLORAR
-                    <ArrowRight className="w-4 h-4" />
+
+                  <button
+                    className="
+                      relative uppercase
+                      overflow-hidden
+                      px-6 py-3
+                      font-title font-semibold tracking-wide 
+                      rounded-lg border-2 
+                      transition-all duration-300
+
+                      text-white border-silver
+
+                      bg-gradient-to-r from-primary to-primary bg-no-repeat 
+                      [background-size:0%_100%]
+                      hover:[background-size:100%_100%]
+                    ">
+                    <span className="relative flex items-center gap-2">
+                      EXPLORAR
+                      <ArrowRight className="w-5 h-5" />
+                    </span>
                   </button>
                 </div>
-                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
               </div>
             </div>
 
             {/* Card Informações */}
             <div className="group cursor-pointer">
-              <div className="relative overflow-hidden rounded-lg bg-gradient-to-br from-primary/5 to-dark-gray border border-silver/20 p-8 h-64 flex flex-col justify-center card-hover metallic-shine silver-glow">
-                <div className="absolute top-4 right-4 w-16 h-16 bg-primary/30 rounded-full flex items-center justify-center">
-                  <Calendar className="w-8 h-8 text-primary" />
-                </div>
+              <div
+                className="
+                relative overflow-hidden rounded-lg 
+                bg-dark-gray
+                border border-silver/10 
+                
+                p-8 h-64 flex flex-col justify-center 
+                
+                group-hover:shadow-[0_0_0_3px_var(--color-silver)]
+                group-hover:border-transparent
+                group-hover:bg-dark-bg
+
+                transition-all duration-300 ease-in-out
+                card-hover metallic-shine
+              ">
+                <div className="absolute inset-0 bg-gradient-to-t from-dark-bg to-dark-gray transition-opacity duration-300 group-hover:opacity-0"></div>
+
                 <div className="relative z-10">
                   <h3 className="text-2xl font-title font-bold text-white uppercase tracking-wide mb-4">
                     INFORMAÇÕES
                   </h3>
-                  <p className="text-secondary mb-6">
-                    Saiba tudo sobre o evento, local, horários e como
-                    participar.
+                  <p className="text-silver mb-6">
+                    Saiba tudo sobre o evento, local, horários e como participar.
                   </p>
-                  <button className="bg-primary/20 hover:bg-primary/30 text-white px-6 py-3 rounded-lg font-title font-semibold uppercase tracking-wide transition-all duration-300 flex items-center gap-2 border border-primary/30">
-                    SABER MAIS
-                    <ArrowRight className="w-4 h-4" />
+
+                  <button
+                    className="
+                      relative uppercase
+                      overflow-hidden
+                      px-6 py-3
+                      font-title font-semibold tracking-wide 
+                      rounded-lg border-2 
+                      transition-all duration-300
+
+                      text-white border-silver
+
+                      bg-gradient-to-r from-primary to-primary bg-no-repeat 
+                      [background-size:0%_100%]
+                      hover:[background-size:100%_100%]
+                    ">
+                    <span className="relative flex items-center gap-2">
+                      SABER MAIS
+                      <ArrowRight className="w-5 h-5" />
+                    </span>
                   </button>
                 </div>
-                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
               </div>
             </div>
           </div>

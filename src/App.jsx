@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import Votacao from "./pages/Votacao";
 import Informacoes from "./pages/Informacoes";
 import Sobre from "./pages/Sobre";
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -20,6 +21,8 @@ function App() {
             <Route path="/sobre" element={<Sobre />} />
           </Routes>
         </main>
+
+        <Footer />
       </div>
     </Router>
       
