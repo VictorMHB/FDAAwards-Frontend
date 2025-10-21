@@ -5,8 +5,24 @@ import Votacao from "./pages/Votacao";
 import Informacoes from "./pages/Informacoes";
 import Sobre from "./pages/Sobre";
 import Footer from './components/Footer';
+import LoadingScreen from './components/LoadingScreen';
+import { useState, useEffect } from 'react';
 
 function App() {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 2000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (loading) {
+    return <LoadingScreen />;
+  }
+
   return (
     <Router>
       <div className="min-h-screen relative bg-background text-white overflow-hidden">

@@ -1,5 +1,6 @@
 import solomon from "../assets/images/solomon.png";
 import cativa from "../assets/images/cativa.png";
+import logika from "../assets/images/logika.png";
 
 export default function Footer() {
   return (
@@ -30,17 +31,17 @@ export default function Footer() {
               PRINCIPAIS PARCEIROS
             </h3>
             <div className="flex gap-6 items-center">
-                <a href="https://www.salomon.inf.br/home" target="_blank" rel="noopener noreferrer" title="Visitar Salomon Studios">
-              <img src={solomon} alt="Logo Solomon Studios" className="w-36 h-20 object-contain filter brightness-500 contrast-50 grayscale-100 hover:opacity-80 transition-all duration-300"/>
+              <a href="https://www.salomon.inf.br/home" target="_blank" rel="noopener noreferrer" title="Visitar Salomon Studios">
+              <img src={solomon} alt="Logo Solomon Studios" className="w-36 h-20 object-contain filter brightness-400 contrast-100 grayscale-100 hover:opacity-60 transition-all duration-300"/>
               </a>
               
               <a href="https://www.instagram.com/cativeirobar/" target="_blank" rel="noopener noreferrer" title="Visitar Cativeiro Bar">
-              <img src={cativa} alt="Logo Solomon Studios" className="w-36 h-20 object-contain hover:opacity-80 transition-all duration-300"/>
+              <img src={cativa} alt="Logo Solomon Studios" className="w-36 h-20 object-contain hover:opacity-60 transition-all duration-300"/>
               </a>
               
-              <div className="w-24 h-12 bg-zinc-700 rounded flex items-center justify-center">
-                Logo 3
-              </div>
+              <a href="https://logikacontabilidade.com.br/" target="_blank" rel="noopener noreferrer" title="Visitar Lógika Contabilidade">
+              <img src={logika} alt="Logo Logika Contabilidade" className="w-40 h-20 object-contain filter brightness-200 contrast-100 grayscale-100 hover:opacity-60 transition-all duration-300"/>
+              </a>
             </div>
           </div>
 

@@ -9,6 +9,7 @@ import {
   Star,
   Award,
 } from "lucide-react";
+import { Link as RouterLink } from "react-router-dom";
 
 import background from "../assets/images/background.png";
 
@@ -226,7 +227,7 @@ export default function Home() {
 
           <div className="grid md:grid-cols-2 gap-8">
             {/* Card Votação */}
-            <div className="group cursor-pointer">
+            <div className="group">
               <div
                 className="
                 relative overflow-hidden rounded-lg 
@@ -256,6 +257,7 @@ export default function Home() {
                   <button
                     className="
                       relative uppercase
+                      cursor-pointer
                       overflow-hidden
                       px-6 py-3
                       font-title font-semibold tracking-wide 
@@ -279,7 +281,7 @@ export default function Home() {
             </div>
 
             {/* Card Patrocinadores */}
-            <div className="group cursor-pointer">
+            <div className="group">
               <div
                 className="
                 relative overflow-hidden rounded-lg 
@@ -305,9 +307,11 @@ export default function Home() {
                     Conheça as empresas que tornam o FDA AWARDS possível todos os anos.
                   </p>
 
+                  <RouterLink to="/sobre#patrocinadores">
                   <button
                     className="
                       relative uppercase
+                      cursor-pointer
                       overflow-hidden
                       px-6 py-3
                       font-title font-semibold tracking-wide 
@@ -325,12 +329,13 @@ export default function Home() {
                       <ArrowRight className="w-5 h-5" />
                     </span>
                   </button>
+                  </RouterLink>
                 </div>
               </div>
             </div>
 
             {/* Card Categorias */}
-            <div className="group cursor-pointer">
+            <div className="group">
               <div
                 className="
                 relative overflow-hidden rounded-lg 
@@ -359,6 +364,7 @@ export default function Home() {
                   <button
                     className="
                       relative uppercase
+                      cursor-pointer
                       overflow-hidden
                       px-6 py-3
                       font-title font-semibold tracking-wide 
@@ -381,7 +387,7 @@ export default function Home() {
             </div>
 
             {/* Card Informações */}
-            <div className="group cursor-pointer">
+            <div className="group">
               <div
                 className="
                 relative overflow-hidden rounded-lg 
@@ -410,6 +416,7 @@ export default function Home() {
                   <button
                     className="
                       relative uppercase
+                      cursor-pointer
                       overflow-hidden
                       px-6 py-3
                       font-title font-semibold tracking-wide 

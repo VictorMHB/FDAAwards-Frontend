@@ -2,8 +2,16 @@
 
 @font-face {
     font-family: Josefin Sans;
-    src: url("../src/assets/fonts/JosefinSans-Bold.ttf")
+    src: url("../src/assets/fonts/JosefinSans-Bold.ttf");
+    font-weight: 700;
+    font-style: normal;
+}
 
+@font-face {
+    font-family: Josefin Sans;
+    src: url("../src/assets/fonts/JosefinSans-Regular.ttf");
+    font-weight: 400;
+    font-style: normal;
 }
 
 @font-face {
@@ -26,11 +34,18 @@
 
     --color-primary: #d63b41;
     --color-secondary: #a6a6a6;
+
     --color-background: #1a1a1a;
     --color-dark-bg: #0f0f0f;
     --color-muted-background: #1b1111;
     --color-foreground: #ffffff;
     --color-muted-foreground: #a6a6a6;
+
+    --color-tier-diamond: #a7ebfc;
+    --color-tier-gold: #DAA520;
+    --color-tier-bronze: #CD7F32;
+    --color-tier-platinum: #9fccc5;
+
     --color-silver: #c0c0c0;
     --color-gray: #808080;
     --color-dark-gray: #2a2a2a;
