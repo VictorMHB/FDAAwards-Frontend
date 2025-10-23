@@ -1,6 +1,6 @@
-import solomon from "../assets/images/solomon.png";
-import cativa from "../assets/images/cativa.png";
-import logika from "../assets/images/logika.png";
+import solomon from "../assets/images/sponsors/solomon.png";
+import cativa from "../assets/images/sponsors/cativa.png";
+import logika from "../assets/images/sponsors/logika.png";
 
 export default function Footer() {
   return (
@@ -36,7 +36,7 @@ export default function Footer() {
               </a>
               
               <a href="https://www.instagram.com/cativeirobar/" target="_blank" rel="noopener noreferrer" title="Visitar Cativeiro Bar">
-              <img src={cativa} alt="Logo Solomon Studios" className="w-36 h-20 object-contain hover:opacity-60 transition-all duration-300"/>
+              <img src={cativa} alt="Logo Cativeiro Bar" className="w-32 h-20 object-contain hover:opacity-60 transition-all duration-300"/>
               </a>
               
               <a href="https://logikacontabilidade.com.br/" target="_blank" rel="noopener noreferrer" title="Visitar Lógika Contabilidade">

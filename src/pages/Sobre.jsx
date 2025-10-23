@@ -1,7 +1,11 @@
 import background from "../assets/images/background_sobre.png";
-import solomon from "../assets/images/solomon.png";
-import cativa from "../assets/images/cativa.png";
-import logika from "../assets/images/logika.png";
+
+import solomon from "../assets/images/sponsors/solomon.png";
+import cativa from "../assets/images/sponsors/cativa.png";
+import logika from "../assets/images/sponsors/logika.png";
+import romane from "../assets/images/sponsors/romane.png";
+import ryp from "../assets/images/sponsors/ryp.png";
+import olive from "../assets/images/sponsors/olive.png";
 
 import fda2024 from "../assets/images/fda_2024.png";
 import fda2023 from "../assets/images/fda_2023.png";
@@ -16,9 +20,9 @@ export default function Sobre() {
     { name: "Logika Contabilidade", tier: 'Diamante', logo: logika, url: 'https://logikacontabilidade.com.br/' },
     { name: "Solomon Studios", tier: 'Diamante', logo: solomon, url: 'https://www.salomon.inf.br/home', filterStyle: 'brightness-400' },
     // Platina
-    { name: "Armarinhos Romane", tier: 'Platina', logo: null, url: 'https://www.instagram.com/armarinhosromanecambe/' },
-    { name: "Olive Studios", tier: 'Platina', logo: null, url: 'https://sites.google.com/edu.unifil.br/olive-studios/p%C3%A1gina-inicial?authuser=0' },
-    { name: "RYP", tier: 'Platina', logo: null, url: '#' },
+    { name: "Armarinhos Romane", tier: 'Platina', logo: romane, url: 'https://www.instagram.com/armarinhosromanecambe/', filterStyle: 'brightness-200' },
+    { name: "Olive Studios", tier: 'Platina', logo: olive, url: 'https://sites.google.com/edu.unifil.br/olive-studios/p%C3%A1gina-inicial?authuser=0' },
+    { name: "RYP", tier: 'Platina', logo: ryp, url: '#'},
     // Ouro
     { name: "Cismus LTDA", tier: 'Ouro', logo: null, url: '#' },
     { name: "Hillebrande Enterprise", tier: 'Ouro', logo: null, url: '#' },
@@ -44,7 +48,7 @@ export default function Sobre() {
           src={sponsor.logo} 
           alt={`Logo ${sponsor.name}`} 
           className={`${sizeClass} 
-          w-64 h-32 object-contain 
+          w-60 h-32 object-contain 
           filter brightness-100 contrast-100 grayscale-100 
           hover:opacity-60 
           transition-all duration-300

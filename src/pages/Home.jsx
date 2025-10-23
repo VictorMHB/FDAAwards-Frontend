@@ -1,17 +1,13 @@
 import { useEffect, useState } from "react";
 import {
-  Clock,
-  Calendar,
   MapPin,
   Play,
   ArrowRight,
-  Users,
-  Star,
-  Award,
+  Award
 } from "lucide-react";
 import { Link as RouterLink } from "react-router-dom";
 
-import background from "../assets/images/background.png";
+import background from "../assets/images/bg_home.png";
 
 export default function Home() {
   const [timeLeft, setTimeLeft] = useState("");
