@@ -1,17 +1,16 @@
 import { useEffect, useState } from "react";
 import {
   MapPin,
-  Play,
   ArrowRight,
   Award
 } from "lucide-react";
 import { Link as RouterLink } from "react-router-dom";
 
 import background from "../assets/images/bg_home.png";
+import geo from "../assets/images/geo_fda.png"
 
 export default function Home() {
   const [timeLeft, setTimeLeft] = useState("");
-  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const showDate = new Date("2025-12-12T20:00:00");
@@ -113,13 +112,15 @@ export default function Home() {
                 card-hover metallic-shine
               ">
                 <div className="aspect-video bg-gradient-to-br from-silver/20 via-dark-gray to-background flex items-center justify-center relative">
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-                  <Play className="w-16 h-16 text-white drop-shadow-lg" />
-                  <div className="absolute bottom-4 left-4 text-white">
-                    <p className="text-sm font-title uppercase tracking-wide">
-                      TRAILER EXCLUSIVO
-                    </p>
-                  </div>
+                  <iframe 
+                    className="w-full h-full" 
+                    src="https://www.youtube.com/embed/t-dZPm4i3_Y?si=QGG4Uzv3Hx0kEhvB" 
+                    title="YouTube video player" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    referrerPolicy="strict-origin-when-cross-origin" 
+                    allowFullScreen>
+                  </iframe>
                 </div>
                 <div className="p-6 bg-black/30 border-t border-silver/10">
                   <h3 className="text-xl font-title font-bold text-white uppercase tracking-wide">
@@ -186,16 +187,12 @@ export default function Home() {
                 transition-all duration-300 ease-in-out
                 card-hover metallic-shine
               ">
-                <div className="aspect-video bg-gradient-to-br from-silver/10 via-dark-gray to-background flex items-center justify-center relative">
+                <div className="
+                  relative aspect-video 
+                  bg-cover bg-center bg-no-repeat 
+                  overflow-hidden" 
+                  style={{ backgroundImage: `url(${geo})` }}>
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10"></div>
-                  <div className="text-center text-white">
-                    <div className="w-20 h-20 bg-primary rounded-full flex items-center justify-center mx-auto mb-2">
-                      <Award className="w-10 h-10 text-white" />
-                    </div>
-                    <div className="text-sm font-title uppercase tracking-wide">
-                      GEOVANE DO CARMO ELIAS
-                    </div>
-                  </div>
                 </div>
                 <div className="p-6 bg-black/30 border-t border-silver/10">
                   <h3 className="text-xl font-title font-bold text-white uppercase tracking-wide">

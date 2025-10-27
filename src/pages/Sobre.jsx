@@ -1,4 +1,4 @@
-import background from "../assets/images/background_sobre.png";
+import background from "../assets/images/bg_sobre.png";
 
 import solomon from "../assets/images/sponsors/solomon.png";
 import cativa from "../assets/images/sponsors/cativa.png";
@@ -43,7 +43,6 @@ export default function Sobre() {
   const renderSponsor = (sponsor, sizeClass) => (
     <a key={sponsor.name} href={sponsor.url} target="_blank" rel="noopener noreferrer" title={`Visitar ${sponsor.name}`}>
       {sponsor.logo ? (
-        // Se tiver logo, mostra a imagem
         <img 
           src={sponsor.logo} 
           alt={`Logo ${sponsor.name}`} 
@@ -55,7 +54,6 @@ export default function Sobre() {
           ${sponsor.filterStyle || ''}
           `} />
       ) : (
-        // Se NÃO tiver logo, mostra apenas o nome com a fonte de título
         <p className="font-title text-xl text-white hover:text-secondary/60 transition-colors">
           {sponsor.name}
         </p>
@@ -72,7 +70,6 @@ export default function Sobre() {
       >
        <div className="absolute inset-0 bg-black/50"></div>
         <div className="relative z-10 max-w-7xl mx-48 px-0 w-full">
-          {/* Bloco de texto inspirado na sua referência */}
           <div className="backdrop-blur-md p-10 rounded-lg max-w-2xl">
             <h1 className="text-6xl font-title font-bold text-white uppercase tracking-wider mb-4">
               SOBRE O <span className="text-primary">FDA</span> AWARDS
@@ -97,8 +94,6 @@ export default function Sobre() {
           <h2 className="text-5xl font-title font-bold text-white uppercase tracking-wider mb-16 text-center">
             HISTÓRICO DE EDIÇÕES
           </h2>
-
-          {/* Container para a lista de edições */}
           <div className="flex flex-col gap-16">
             
             {/* --- EDIÇÃO 2024 --- */}
