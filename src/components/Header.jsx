@@ -1,10 +1,12 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { FiMenu, FiX } from "react-icons/fi";
+import MenuMobile from "./MenuMobile";
 
 export default function Header() {
     const [menuOpen, setMenuOpen] = useState(false);
     const toggleMenu = () => setMenuOpen(!menuOpen);
+    const closeMenu = () => setMenuOpen(false);
 
     return(
         <>
@@ -21,9 +23,8 @@ export default function Header() {
 
         {/* Botão do menu mobile */}
         <button
-          className="xl:hidden text-white text-3xl focus:outline-none"
-          onClick={toggleMenu}
-        >
+          className="xl:hidden text-white text-3xl focus:outline-none z-50" // Aumenta o z-index se necessário
+          onClick={toggleMenu}>
           {menuOpen ? <FiX /> : <FiMenu />}
         </button>
 
@@ -63,23 +64,7 @@ export default function Header() {
         </nav>
       </header>
 
-      {/*Menu Mobile*/}      
-      <div className={`xl:hidden fixed top-0 right-0 h-full w-2/3 bg-background/80 backdrop-blur-lg shadow-lg transform transition-transform duration-300 ${
-            menuOpen ? "translate-x-0" : "translate-x-full"
-        } z-40`}>
-            <ul className="flex flex-col items-center justify-center h-full gap-8 font-title text-lg">
-                {["Home", "Votação", "Informações", "Sobre"].map((item) => (
-                    <li key={item} className="relative p-3 cursor-pointer text-white hover:text-primary transition-all" onClick={() => setMenuOpen(false)}>
-                        {item}
-                        <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-whte transition-all duration-300 group-hover:w-full"></span>
-                    </li>
-                ))}
-            </ul>
-        </div>
-
-        {menuOpen && (
-            <div className="fixed inset-0 bg-black/40 backdrop-blur-xl lx:hidden z-30" onClick={() => setMenuOpen(false)}></div>
-        )}
+      <MenuMobile isOpen={menuOpen} onClose={closeMenu} />
         </>
     )
 }
