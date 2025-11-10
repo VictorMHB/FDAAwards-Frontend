@@ -6,14 +6,14 @@ import {
 } from "lucide-react";
 import { Link as RouterLink } from "react-router-dom";
 
-import background from "../assets/images/bg_home.png";
+import background from "../assets/images/backgrounds/bg_home.png";
 import geo from "../assets/images/geo_fda.png"
 
 export default function Home() {
   const [timeLeft, setTimeLeft] = useState("");
 
   useEffect(() => {
-    const showDate = new Date("2025-12-12T20:00:00");
+    const showDate = new Date("2025-12-13T20:00:00");
     const updateTimer = () => {
       const now = new Date();
       const diff = showDate - now;
@@ -35,16 +35,30 @@ export default function Home() {
   return (
     <main className="bg-background text-white min-h-screen overflow-hidden">
       {/* ======= BANNER ======= */}
-      <div className="mt-5 bg-gradient-to-r from-primary/65 via-primary/80 to-primary/65 py-4 border-b-2 border-silver">
-        <div className="text-center uppercase tracking-wider font-title">
-          <p className="text-sm md:text-base text-white">
-            • INÍCIO DAS VOTAÇÕES DIA 01 DE NOVEMBRO •
-          </p>
-          <p className="text-base md:text-lg font-bold mt-2 text-white">
-            {timeLeft}
-          </p>
-        </div>
+  <div className="mt-5 bg-gradient-to-r from-primary/65 via-primary/80 to-primary/65 py-4 border-b-2 border-silver">
+    <div className="flex flex-col md:flex-row items-center justify-center text-center uppercase tracking-wider font-title space-y-3 md:space-y-0 md:space-x-10">
+
+      {/* === SEÇÃO 1: VOTAÇÕES ABERTAS === */}
+      <div>
+        <p className="text-sm md:text-base text-white">
+          • AS VOTAÇÕES JÁ ESTÃO ABERTAS •
+        </p>
       </div>
+
+      {/* === DIVISOR VISUAL (OPCIONAL) === */}
+      <div className="hidden md:block w-[1px] h-12 bg-silver"></div>
+
+      {/* === SEÇÃO 2: CONTAGEM REGRESSIVA PARA O SHOW === */}
+      <div>
+        <p className="text-sm md:text-base text-white">
+          • CONTAGEM REGRESSIVA PARA O SHOW •
+        </p>
+        <p className="text-base md:text-lg font-bold mt-1 text-white">
+          {timeLeft}
+        </p>
+      </div>
+    </div>
+  </div>
 
       {/* ======= LANDING SECTION ======= */}
       <section
@@ -65,7 +79,7 @@ export default function Home() {
             </div>
 
             <div className="text-6xl lg:text-6xl font-title font-bold text-white">
-              12 de DEZEMBRO
+              13 de DEZEMBRO
             </div>
 
             <div className="text-xl lg:text-2xl text-white/90 font-bold uppercase tracking-wide">
@@ -87,7 +101,7 @@ export default function Home() {
       </div>
 
       {/* ======= NEWS SECTION ======= */}
-      <section className="py-20 px-8 bg-gradient-to-r from-background via-muted-background to-background">
+      <section className="py-20 px-8 bg-gradient-to-r from-dark-bg via-muted-background to-dark-bg">
         <div className="max-w-7xl mx-auto">
           <div className="flex justify-between items-center mb-12">
             <h2 className="text-5xl font-title font-bold text-white uppercase tracking-wider">
@@ -149,13 +163,13 @@ export default function Home() {
                 transition-all duration-300 ease-in-out
                 card-hover metallic-shine
               ">
-                <div className="aspect-video bg-gradient-to-br from-silver/20 via-dark-gray to-background flex items-center justify-center relative">
+                <div className="aspect-video bg-gradient-to-t from-dark-primary via-muted-background to-background flex items-center justify-center relative">
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                   <div className="text-center text-white">
-                    <div className="text-3xl font-title font-bold text-primary mb-2">
+                    <div className="text-5xl font-title font-bold text-primary mb-2">
                       210 MIL
                     </div>
-                    <div className="text-sm font-title uppercase tracking-wide">
+                    <div className="text-2xl font-title uppercase tracking-wide">
                       VOTANTES
                     </div>
                   </div>
@@ -210,7 +224,7 @@ export default function Home() {
       </section>
 
       {/* ======= EXPLORE SECTION ======= */}
-      <section className="py-20 px-8 bg-gradient-to-r from-background via-muted-background to-background">
+      <section className="py-20 px-8 bg-gradient-to-r from-dark-bg via-muted-background to-dark-bg">
         <div className="max-w-7xl mx-auto">
           <div className="flex justify-between items-center mb-12">
             <h2 className="text-5xl font-title font-bold text-white uppercase tracking-wider">
@@ -354,6 +368,7 @@ export default function Home() {
                     Explore todas as categorias e veja os indicados ao FDA AWARDS.
                   </p>
 
+                  <RouterLink to="/votacao#categorias">
                   <button
                     className="
                       relative uppercase
@@ -375,6 +390,7 @@ export default function Home() {
                       <ArrowRight className="w-5 h-5" />
                     </span>
                   </button>
+                  </RouterLink>
                 </div>
               </div>
             </div>
@@ -406,6 +422,7 @@ export default function Home() {
                     Saiba tudo sobre o evento, local, horários e como participar.
                   </p>
 
+                  <RouterLink to="/informacoes">
                   <button
                     className="
                       relative uppercase
@@ -427,6 +444,7 @@ export default function Home() {
                       <ArrowRight className="w-5 h-5" />
                     </span>
                   </button>
+                  </RouterLink>
                 </div>
               </div>
             </div>

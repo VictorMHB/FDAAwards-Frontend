@@ -1,4 +1,4 @@
-import background from "../assets/images/bg_info.png";
+import background from "../assets/images/backgrounds/bg_info.png";
 
 import { Calendar, Clock, MapPin, Film, Award, Mic, Tv, Youtube, Twitch, HelpCircle, ChevronDown, DoorOpen, Video } from 'lucide-react';
 import { useState } from 'react';
@@ -42,7 +42,7 @@ export default function Informacoes() {
         className="relative py-48 px-8 bg-cover bg-center bg-no-repeat border-b-2 border-silver"
         style={{ backgroundImage: `url(${background})` }}
       >
-        <div className="absolute inset-0 bg-black/70"></div>
+        <div className="absolute inset-0 bg-black/50"></div>
         <div className="relative z-10 max-w-4xl mx-auto text-center">
           <h1 className="text-6xl lg:text-8xl font-title font-bold text-white uppercase tracking-wider mb-10">
             Informações do Evento
@@ -53,14 +53,14 @@ export default function Informacoes() {
               <Calendar className="w-10 h-10 text-primary flex-shrink-0" />
               <div>
                 <h3 className="text-xl font-title font-bold uppercase tracking-wide">Data</h3>
-                <p className="text-silver">12 de Dezembro, 2025</p>
+                <p className="text-silver">13 de Dezembro, 2025</p>
               </div>
             </div>
             <div className="bg-black/50 p-6 rounded-lg border border-silver/20 flex items-center gap-4">
               <Clock className="w-10 h-10 text-primary flex-shrink-0" />
               <div>
                 <h3 className="text-xl font-title font-bold uppercase tracking-wide">Horário</h3>
-                <p className="text-silver">A partir das 20h (BRT)</p>
+                <p className="text-silver">A partir das 19:30 (BRT)</p>
               </div>
             </div>
             <div className="bg-black/50 p-6 rounded-lg border border-silver/20 flex items-center gap-4">
@@ -75,7 +75,7 @@ export default function Informacoes() {
       </section>
 
       {/* ======= SEÇÃO 2: CRONOGRAMA DO EVENTO ======= */}
-      <section className="py-20 px-8 bg-gradient-to-r from-dark-bg via-background to-dark-bg">
+      <section className="py-20 px-8 bg-gradient-to-r from-dark-bg via-background to-dark-bg border-b-2 border-silver">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-5xl font-title font-bold text-white uppercase tracking-wider mb-20 text-center">
             Cronograma

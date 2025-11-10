@@ -1,4 +1,4 @@
-import background from "../assets/images/bg_sobre.png";
+import background from "../assets/images/backgrounds/bg_sobre.png";
 
 import solomon from "../assets/images/sponsors/solomon.png";
 import cativa from "../assets/images/sponsors/cativa.png";
@@ -65,7 +65,7 @@ export default function Sobre() {
     <main className="bg-dark-bg text-white min-h-screen overflow-hidden">
       {/* ======= SEÇÃO 1: SOBRE O FDA AWARDS ======= */}
       <section
-        className="relative h-[75vh] flex items-center bg-cover bg-center bg-no-repeat"
+        className="relative h-[75vh] flex items-center bg-cover bg-center bg-no-repeat border-b-2 border-silver"
         style={{ backgroundImage: `url(${background})` }}
       >
        <div className="absolute inset-0 bg-black/50"></div>

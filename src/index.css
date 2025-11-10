@@ -33,6 +33,7 @@
     --font-text: "Spectral", "serif";
 
     --color-primary: #d63b41;
+    --color-dark-primary: #8a272a;
     --color-secondary: #a6a6a6;
 
     --color-background: #1a1a1a;
@@ -67,4 +68,15 @@ html, body, #root {
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
+}
+
+@layer utilities {
+  .animate-marquee {
+    animation: marquee 25s linear infinite;
+  }
+  
+  @keyframes marquee {
+    from { transform: translateX(0%); }
+    to { transform: translateX(-100%); }
+  }
 }

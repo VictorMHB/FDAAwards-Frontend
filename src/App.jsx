@@ -2,6 +2,8 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useState, useEffect } from 'react';
 
+import ScrollTop from "./components/ScrollElement";
+
 import Header from './components/Header';
 import Footer from './components/Footer';
 import LoadingScreen from './components/LoadingScreen';
@@ -44,6 +46,7 @@ function App() {
           animate={{ opacity: 1, transition: { duration: 1.2 } }}
         >
           <Router>
+            <ScrollTop />
             <div className="min-h-screen relative bg-background text-white overflow-hidden">
               <Header />
 
