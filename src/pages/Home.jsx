@@ -1,8 +1,7 @@
 import { useEffect, useState } from "react";
 import {
   MapPin,
-  ArrowRight,
-  Award
+  ArrowRight
 } from "lucide-react";
 import { Link as RouterLink } from "react-router-dom";
 
@@ -10,6 +9,8 @@ import background from "../assets/images/backgrounds/bg_home.png";
 import geo from "../assets/images/geo_fda.png"
 
 export default function Home() {
+  const googleFormUrl = "https://forms.gle/jqkf8embdv3FKUWk9";
+
   const [timeLeft, setTimeLeft] = useState("");
 
   useEffect(() => {
@@ -35,29 +36,24 @@ export default function Home() {
   return (
     <main className="bg-background text-white min-h-screen overflow-hidden">
       {/* ======= BANNER ======= */}
-  <div className="mt-5 bg-gradient-to-r from-primary/65 via-primary/80 to-primary/65 py-4 border-b-2 border-silver">
-    <div className="flex flex-col md:flex-row items-center justify-center text-center uppercase tracking-wider font-title space-y-3 md:space-y-0 md:space-x-10">
+  <div className="mt-5 text-center font-title font-bold uppercase tracking-wider">
 
-      {/* === SEÇÃO 1: VOTAÇÕES ABERTAS === */}
-      <div>
-        <p className="text-sm md:text-base text-white">
-          • AS VOTAÇÕES JÁ ESTÃO ABERTAS •
-        </p>
-      </div>
+    {/* === PRIMEIRA FAIXA: VOTAÇÕES === */}
+    <div className="bg-gradient-to-r from-primary/65 via-primary/80 to-primary/65 py-4 border-b-2 border-silver">
+      <p className="text-sm md:text-base text-white">
+        • AS VOTAÇÕES JÁ ESTÃO ABERTAS •
+      </p>
 
-      {/* === DIVISOR VISUAL (OPCIONAL) === */}
-      <div className="hidden md:block w-[1px] h-12 bg-silver"></div>
-
-      {/* === SEÇÃO 2: CONTAGEM REGRESSIVA PARA O SHOW === */}
-      <div>
-        <p className="text-sm md:text-base text-white">
-          • CONTAGEM REGRESSIVA PARA O SHOW •
-        </p>
-        <p className="text-base md:text-lg font-bold mt-1 text-white">
-          {timeLeft}
-        </p>
-      </div>
+      
     </div>
+
+    {/* === SEGUNDA FAIXA: CONTAGEM REGRESSIVA === */}
+    <div className="bg-gradient-to-r from-gray via-silver/90 to-gray py-3 border-b-2 border-silver">
+      <p className="text-sm md:text-base font-bold text-black tracking-widest">
+        {timeLeft}
+      </p>
+    </div>
+
   </div>
 
       {/* ======= LANDING SECTION ======= */}
@@ -261,6 +257,7 @@ export default function Home() {
                     categoria.
                   </p>
 
+                  <RouterLink to="/votacao">
                   <button
                     className="
                       relative uppercase
@@ -283,6 +280,7 @@ export default function Home() {
                       <ArrowRight className="w-5 h-5" />
                     </span>
                   </button>
+                  </RouterLink>
                 </div>
               </div>
             </div>

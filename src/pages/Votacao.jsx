@@ -1,11 +1,10 @@
 import categoriasData from '../data/categorias.json';
 import CategoryCard from '../components/CategoryCard';
-import AnimatedLinesBackground from '../components/AnimatedLinesBackground';
 import background from '../assets/images/backgrounds/bg_votacao.png';
 
 export default function Votacao() {
   
-  const googleFormUrl = "URL_DO_SEU_GOOGLE_FORM_AQUI";
+  const googleFormUrl = "https://forms.gle/jqkf8embdv3FKUWk9";
 
   const premiosEspeciais = categoriasData.filter(cat => cat.especial === true);
   const categoriasRegulares = categoriasData.filter(cat => !cat.especial);
