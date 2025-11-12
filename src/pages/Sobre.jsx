@@ -30,7 +30,7 @@ export default function Sobre() {
     // Prata
     { name: "Batalha do RU", tier: 'Prata', logo: null, url: '#' },
     { name: "CSGOnet", tier: 'Prata', logo: null, url: '#' },
-    { name: "Seguro's Berna", tier: 'Prata', logo: null, url: '#' },
+    { name: "Seguro Bernas", tier: 'Prata', logo: null, url: '#' },
     { name: "UniFil", tier: 'Prata', logo: null, url: '#' },
     // Bronze
     { name: "Bar do PIG", tier: 'Bronze', logo: null, url: '#' },

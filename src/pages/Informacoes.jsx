@@ -10,7 +10,7 @@ export default function Informacoes() {
     { hora: "20:30", evento: "Apresentação dos Primeiros Vencedores", icone: <Award className="w-5 h-5 text-primary" /> },
     { hora: "21:30", evento: "Anúncios Especiais e Trailers", icone: <Video className="w-5 h-5 text-silver" /> },
     { hora: "22:00", evento: "Apresentação dos Vencedores Principais", icone: <Award className="w-5 h-5 text-primary" /> },
-    { hora: "23:45", evento: "Encerramento da Cerimônia", icone: <Mic className="w-5 h-5 text-silver" /> },
+    { hora: "22:45", evento: "Encerramento da Cerimônia", icone: <Mic className="w-5 h-5 text-silver" /> },
     { hora: "23:00", evento: "Exibição Exclusiva: Server o Filme", icone: <Film className="w-5 h-5 text-primary" /> },
   ];
 

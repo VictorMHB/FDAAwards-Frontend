@@ -1,12 +1,9 @@
 import { useEffect, useState } from "react";
-import {
-  MapPin,
-  ArrowRight
-} from "lucide-react";
+import { MapPin, ArrowRight } from "lucide-react";
 import { Link as RouterLink } from "react-router-dom";
 
 import background from "../assets/images/backgrounds/bg_home.png";
-import geo from "../assets/images/geo_fda.png"
+import geo from "../assets/images/geo_fda.png";
 
 export default function Home() {
   const googleFormUrl = "https://forms.gle/jqkf8embdv3FKUWk9";
@@ -36,25 +33,21 @@ export default function Home() {
   return (
     <main className="bg-background text-white min-h-screen overflow-hidden">
       {/* ======= BANNER ======= */}
-  <div className="mt-5 text-center font-title font-bold uppercase tracking-wider">
+      <div className="mt-5 text-center font-title font-bold uppercase tracking-wider">
+        {/* === PRIMEIRA FAIXA: VOTAÇÕES === */}
+        <div className="bg-gradient-to-r from-primary/65 via-primary/80 to-primary/65 py-4 border-b-2 border-silver">
+          <p className="text-sm md:text-base text-white">
+            • AS VOTAÇÕES JÁ ESTÃO ABERTAS •
+          </p>
+        </div>
 
-    {/* === PRIMEIRA FAIXA: VOTAÇÕES === */}
-    <div className="bg-gradient-to-r from-primary/65 via-primary/80 to-primary/65 py-4 border-b-2 border-silver">
-      <p className="text-sm md:text-base text-white">
-        • AS VOTAÇÕES JÁ ESTÃO ABERTAS •
-      </p>
-
-      
-    </div>
-
-    {/* === SEGUNDA FAIXA: CONTAGEM REGRESSIVA === */}
-    <div className="bg-gradient-to-r from-gray via-silver/90 to-gray py-3 border-b-2 border-silver">
-      <p className="text-sm md:text-base font-bold text-black tracking-widest">
-        {timeLeft}
-      </p>
-    </div>
-
-  </div>
+        {/* === SEGUNDA FAIXA: CONTAGEM REGRESSIVA === */}
+        <div className="bg-gradient-to-r from-gray via-silver/90 to-gray py-3 border-b-2 border-silver">
+          <p className="text-sm md:text-base font-bold text-black tracking-widest">
+            {timeLeft}
+          </p>
+        </div>
+      </div>
 
       {/* ======= LANDING SECTION ======= */}
       <section
@@ -120,17 +113,18 @@ export default function Home() {
                 
                 transition-all duration-300 ease-in-out
                 card-hover metallic-shine
-              ">
+              "
+              >
                 <div className="aspect-video bg-gradient-to-br from-silver/20 via-dark-gray to-background flex items-center justify-center relative">
-                  <iframe 
-                    className="w-full h-full" 
-                    src="https://www.youtube.com/embed/t-dZPm4i3_Y?si=QGG4Uzv3Hx0kEhvB" 
-                    title="YouTube video player" 
-                    frameborder="0" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                    referrerPolicy="strict-origin-when-cross-origin" 
-                    allowFullScreen>
-                  </iframe>
+                  <iframe
+                    className="w-full h-full"
+                    src="https://www.youtube.com/embed/t-dZPm4i3_Y?si=QGG4Uzv3Hx0kEhvB"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerPolicy="strict-origin-when-cross-origin"
+                    allowFullScreen
+                  ></iframe>
                 </div>
                 <div className="p-6 bg-black/30 border-t border-silver/10">
                   <h3 className="text-xl font-title font-bold text-white uppercase tracking-wide">
@@ -158,7 +152,8 @@ export default function Home() {
                 
                 transition-all duration-300 ease-in-out
                 card-hover metallic-shine
-              ">
+              "
+              >
                 <div className="aspect-video bg-gradient-to-t from-dark-primary via-muted-background to-background flex items-center justify-center relative">
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                   <div className="text-center text-white">
@@ -196,12 +191,15 @@ export default function Home() {
                 
                 transition-all duration-300 ease-in-out
                 card-hover metallic-shine
-              ">
-                <div className="
+              "
+              >
+                <div
+                  className="
                   relative aspect-video 
                   bg-cover bg-center bg-no-repeat 
-                  overflow-hidden" 
-                  style={{ backgroundImage: `url(${geo})` }}>
+                  overflow-hidden"
+                  style={{ backgroundImage: `url(${geo})` }}
+                >
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10"></div>
                 </div>
                 <div className="p-6 bg-black/30 border-t border-silver/10">
@@ -245,7 +243,8 @@ export default function Home() {
 
                 transition-all duration-300 ease-in-out
                 card-hover metallic-shine
-              ">
+              "
+              >
                 <div className="absolute inset-0 bg-gradient-to-t from-dark-bg to-dark-gray transition-opacity duration-300 group-hover:opacity-0"></div>
 
                 <div className="relative z-10">
@@ -258,8 +257,8 @@ export default function Home() {
                   </p>
 
                   <RouterLink to="/votacao">
-                  <button
-                    className="
+                    <button
+                      className="
                       relative uppercase
                       cursor-pointer
                       overflow-hidden
@@ -274,12 +273,13 @@ export default function Home() {
                       bg-gradient-to-r from-primary to-primary bg-no-repeat 
                       [background-size:0%_100%]
                       hover:[background-size:100%_100%]
-                    ">
-                    <span className="relative flex items-center gap-2">
-                      VOTAR AGORA
-                      <ArrowRight className="w-5 h-5" />
-                    </span>
-                  </button>
+                    "
+                    >
+                      <span className="relative flex items-center gap-2">
+                        VOTAR AGORA
+                        <ArrowRight className="w-5 h-5" />
+                      </span>
+                    </button>
                   </RouterLink>
                 </div>
               </div>
@@ -301,7 +301,8 @@ export default function Home() {
 
                 transition-all duration-300 ease-in-out
                 card-hover metallic-shine
-              ">
+              "
+              >
                 <div className="absolute inset-0 bg-gradient-to-t from-dark-bg to-dark-gray transition-opacity duration-300 group-hover:opacity-0"></div>
 
                 <div className="relative z-10">
@@ -309,12 +310,13 @@ export default function Home() {
                     PATROCINADORES
                   </h3>
                   <p className="text-silver mb-6">
-                    Conheça as empresas que tornam o FDA AWARDS possível todos os anos.
+                    Conheça as empresas que tornam o FDA AWARDS possível todos
+                    os anos.
                   </p>
 
                   <RouterLink to="/sobre#patrocinadores">
-                  <button
-                    className="
+                    <button
+                      className="
                       relative uppercase
                       cursor-pointer
                       overflow-hidden
@@ -328,12 +330,13 @@ export default function Home() {
                       bg-gradient-to-r from-primary to-primary bg-no-repeat 
                       [background-size:0%_100%]
                       hover:[background-size:100%_100%]
-                    ">
-                    <span className="relative flex items-center gap-2">
-                      CONHECER
-                      <ArrowRight className="w-5 h-5" />
-                    </span>
-                  </button>
+                    "
+                    >
+                      <span className="relative flex items-center gap-2">
+                        CONHECER
+                        <ArrowRight className="w-5 h-5" />
+                      </span>
+                    </button>
                   </RouterLink>
                 </div>
               </div>
@@ -355,7 +358,8 @@ export default function Home() {
 
                 transition-all duration-300 ease-in-out
                 card-hover metallic-shine
-              ">
+              "
+              >
                 <div className="absolute inset-0 bg-gradient-to-t from-dark-bg to-dark-gray transition-opacity duration-300 group-hover:opacity-0"></div>
 
                 <div className="relative z-10">
@@ -363,12 +367,13 @@ export default function Home() {
                     CATEGORIAS
                   </h3>
                   <p className="text-silver mb-6">
-                    Explore todas as categorias e veja os indicados ao FDA AWARDS.
+                    Explore todas as categorias e veja os indicados ao FDA
+                    AWARDS.
                   </p>
 
                   <RouterLink to="/votacao#categorias">
-                  <button
-                    className="
+                    <button
+                      className="
                       relative uppercase
                       cursor-pointer
                       overflow-hidden
@@ -382,12 +387,13 @@ export default function Home() {
                       bg-gradient-to-r from-primary to-primary bg-no-repeat 
                       [background-size:0%_100%]
                       hover:[background-size:100%_100%]
-                    ">
-                    <span className="relative flex items-center gap-2">
-                      EXPLORAR
-                      <ArrowRight className="w-5 h-5" />
-                    </span>
-                  </button>
+                    "
+                    >
+                      <span className="relative flex items-center gap-2">
+                        EXPLORAR
+                        <ArrowRight className="w-5 h-5" />
+                      </span>
+                    </button>
                   </RouterLink>
                 </div>
               </div>
@@ -409,7 +415,8 @@ export default function Home() {
 
                 transition-all duration-300 ease-in-out
                 card-hover metallic-shine
-              ">
+              "
+              >
                 <div className="absolute inset-0 bg-gradient-to-t from-dark-bg to-dark-gray transition-opacity duration-300 group-hover:opacity-0"></div>
 
                 <div className="relative z-10">
@@ -417,12 +424,13 @@ export default function Home() {
                     INFORMAÇÕES
                   </h3>
                   <p className="text-silver mb-6">
-                    Saiba tudo sobre o evento, local, horários e como participar.
+                    Saiba tudo sobre o evento, local, horários e como
+                    participar.
                   </p>
 
                   <RouterLink to="/informacoes">
-                  <button
-                    className="
+                    <button
+                      className="
                       relative uppercase
                       cursor-pointer
                       overflow-hidden
@@ -436,12 +444,13 @@ export default function Home() {
                       bg-gradient-to-r from-primary to-primary bg-no-repeat 
                       [background-size:0%_100%]
                       hover:[background-size:100%_100%]
-                    ">
-                    <span className="relative flex items-center gap-2">
-                      SABER MAIS
-                      <ArrowRight className="w-5 h-5" />
-                    </span>
-                  </button>
+                    "
+                    >
+                      <span className="relative flex items-center gap-2">
+                        SABER MAIS
+                        <ArrowRight className="w-5 h-5" />
+                      </span>
+                    </button>
                   </RouterLink>
                 </div>
               </div>
